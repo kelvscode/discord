@@ -1,71 +1,230 @@
-*{
+* {
+    box-sizing: border-box;
     margin:0;
     padding:0;
-    font-family: sans-serif;
-    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.info-top {
-    width:100%;
-    height:30px;
-    background-color: #212226;
+:root {
+    --background-color-dark: #202225;
+    --background-color-light:#2F3136;
+    --background-color-neutral:#36393F;
+    --color-text:#909097;
+    --color-text-light:#97A69D;
+    --lower-bar-color:#40444B;
+}
+
+.top-bar{
     display:flex;
+    justify-content:space-between;
+    background-color: var(--background-color-dark);
+    height:1.5rem;
+    color: #fff;
 }
 
-.discord-title,
-.button-top {
-    color:#A2A3A7;
-    margin:5px;
-    font-size:15px;
+.content {
+  display: flex;
+  flex:1;
 }
 
-.discord-title{
-    font-weight: bold;
-    position: absolute;
+.discord-title {
+    font-weight:bold;
 }
 
-nav{
-    flex:1;
-    text-align: right;
-}
-/* Barra superior e propriedades de alinhamento */
-
-.barra-lateral{
-    margin:0;
-    display:grid;
-    background-color:#212226;
-    width:7vh;
-    height:100%;
-}
-
-.img-up{
-    position: absolute;
-    width:40px;
-    height:40px;
-    margin-left:4px;
-    border-radius:50%;
-}
-
-.disc{
-    border-radius:50%;
+.interface {
     display:flex;
     flex-direction: column;
-    height:2.7em;
-    width:2.7em;
-    padding:2px;
-    margin-bottom:3px;
-    margin-left:5px;
+    height:100vh ;
 }
 
-.disc-agrup{
-    margin-top:3.5em;
+.servers-barra {
+    background-color: var(--background-color-dark);
+    display:flex;
+    flex-direction: column;
+    width:4.5em;
+    align-items: center;
 }
-/* Barra lateral esquerda */
 
-.sec-bar{
-    position: absolute;
-    margin-left:3.3rem;
-    background-color: #303136;
-    padding:10px solid #303136;
-    height:100%;
+.icon-top{
+    margin-bottom:1em;
+    border-radius:50%;
+    width:3em;
+    margin:0.5em;
+    filter: brightness(0.8) invert() grayscale();
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.divider {
+    width:2em;
+    background-color: white;
+    height:0.125em ;
+    opacity:0.2;
+}
+
+.icon-bar {
+    border-radius:50%;
+    width:3rem;
+    margin:0.5em;
+}
+
+/* Parte c salas do servidor */
+
+.server-inside {
+    display:flex; 
+    flex-direction:column;
+    justify-content:space-between;
+    background-color: var(--background-color-light);
+    width:17em;
+}
+
+.text {
+    text-indent:0.9375rem;
+    margin:0.5em;
+    text-transform: lowercase;
+    color:var(--color-text);
+    font-weight: bold;
+    font-size:1em;
+}
+
+.text-title{
+    font-size:0.8rem;
+    text-indent: 0;
+    text-transform: uppercase;
+}
+
+.user-info {
+    display:flex;
+    flex-direction: row;
+    background-color: #292B2F;
+    justify-content: space-between;
+}
+
+.text-user-info {
+    display:flex;
+    margin-top:0.6em;
+}
+
+.img-user {
+    border-radius:50%;
+    width:3rem;
+    margin:0.6em;
+    filter:brightness(1.4) saturate(3);
+}
+
+.user-name {
+    font-weight: bold;
+    color:#fff;
+}
+
+.user-status {
+    margin-right:2.4em;
+    color:var(--color-text-light);
+}
+
+.imgs-user-general {
+    align-items: center;
+    filter:invert();
+    opacity: 0.5;
+    padding: 0.8em;
+    
+}
+
+.user-imgs {
+    margin:0 0.2em;
+    width:1.4em;
+}
+
+/* PLACE WHERE I DID THE JUSTIFY CONTENT  */
+.user-interface {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--background-color-neutral);
+    width:60%;
+}
+
+
+
+.top-info {
+    display: flex;
+    align-items: center;
+}
+
+.icon-top-bar,
+.search-icon {
+    height:1.3em;
+    margin:1em;
+    filter:invert();
+    opacity: 0.6;
+}
+
+.titulo-top {
+    font-size:25px;
+    opacity:1;
+    color:#fff;
+    margin-right:17%;
+}
+
+.search-bar {
+    background-color: var(--background-color-dark);
+    border:none;
+    height:1.9em;
+    color:var(--color-text-light);
+    font-weight: bold;
+    text-indent: 0.3125rem;
+    font-size:0.85em;
+    border-radius: 0.5em;
+    width:18%;
+}
+
+.lower-chat {
+    border-radius:0.5em;
+    position:relative;
+    display:flex;
+    bottom:0;
+    justify-content: space-between;
+    margin: 1em;
+    height:6vh;
+    background-color: var(--lower-bar-color);
+}
+
+.button-lower {
+    border:none;
+    background-color: var(--lower-bar-color);
+    color:var(--color-text-light);
+    font-size: 1rem;
+}
+
+.icons-lower {
+    filter:invert();
+    opacity: .7;
+    width:1.5em;
+    height:1.5em;
+    aspect-ratio: 1;
+    margin:.7em;
+}
+
+.lower-two {
+    display:flex;
+}
+
+.lower-one {
+    display:flex;
+}
+
+.plus-thing {
+    margin:0.7em;
+    width:1.6em;
+}
+
+.something-two {
+    align-items:center;
+}
+
+/* barra lateral direita */
+.right-bar {
+    background-color: var(--background-color-light);
+    width:20%;
 }
