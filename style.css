@@ -108,7 +108,7 @@
 
 .img-user {
     border-radius:50%;
-    width:3rem;
+    width:2.5rem;
     margin:0.6em;
     filter:brightness(1.4) saturate(3);
 }
@@ -149,6 +149,7 @@
 
 .top-info {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -183,6 +184,7 @@
     border-radius:0.5em;
     position:relative;
     display:flex;
+    flex-wrap: wrap;
     bottom:0;
     justify-content: space-between;
     margin: 1em;
@@ -191,6 +193,7 @@
 }
 
 .button-lower {
+    width: 100%;
     border:none;
     background-color: var(--lower-bar-color);
     color:var(--color-text-light);
@@ -208,11 +211,19 @@
 
 .lower-two {
     display:flex;
+    flex: 0 1;
 }
 
 .lower-one {
     display:flex;
+    flex: 1 1 50%;
 }
+
+.lower-one textarea {
+    resize: none;
+    height:60%;
+    margin:auto;
+  }
 
 .plus-thing {
     margin:0.7em;
@@ -223,8 +234,87 @@
     align-items:center;
 }
 
+/* info do user no chat */
+
+.chat,
+.name-date {
+    display:flex;
+    align-items: center;
+    /* align the infos close to each other */
+}
+
+.chat {
+    position:absolute;
+    bottom:0;
+    margin-bottom:4em;
+    width:50%;
+}
+
+.chat-text {
+    margin-left:0.5em;
+    width:100%;
+}
+
+.chat-par{
+    width:100%;
+    color:#fff;
+    font-size:0.9em;
+}
+
+
+
+.user-name-two {
+    font-size:1em;
+    text-transform: capitalize;
+    font-weight: 800;
+    color:var(--color-text-light);
+}
+
+.time {
+    margin-left:0.8em;
+    font-size:0.7125rem;
+    color:var(--color-text-light)
+}
+
+
+.icon-people-chat {
+    margin-left:1em;
+    aspect-ratio: 1;
+    width:3.2em;
+    border-radius: 50%;
+    /* icon profile in the chat */
+}
+
 /* barra lateral direita */
 .right-bar {
     background-color: var(--background-color-light);
     width:20%;
+    display:flex;
+    flex-direction: column;
+}
+
+.info-right-user {
+    margin:2em 0 0 1em;
+    color: var(--color-text);
+}
+
+.role {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.icon-user-right {
+    width:3em;
+    border-radius:50%;
+}
+.user-right {
+    display:flex;
+    margin-top:0.5em;
+    align-items: center;
+}
+
+.nick-right {
+    margin-left:0.5em;
+    font-weight:bold;
+    color:rgb(94, 159, 243);
 }
